@@ -2,10 +2,20 @@
 
 Personal homepage served at **https://diegozuluaga.dev/** (replaces Linktree).
 
-A single static page (`index.html`), no build step. Career content is sourced from
-`~/tools/git/career` (wiki: `career/wiki/entities/diego-zuluaga.md`, resume, LinkedIn v5 copy).
+Built on the [Magic UI portfolio template](https://github.com/dillionverma/portfolio)
+by Dillion Verma (MIT, see `LICENSE`). Next.js 16 + Tailwind 4.
+
+- **Content:** almost everything lives in `src/data/resume.tsx` (work, projects, talks, links).
+  Career facts come from `~/tools/git/career` (wiki profile, resume, LinkedIn copy).
+- **Images:** company/event logos in `public/logos/`, project previews in `public/projects/`.
+- **Blog:** the template's MDX blog is wired up (`content-collections.ts`, empty `content/`)
+  but its routes were removed until there are posts to show.
+
+```sh
+pnpm install
+pnpm dev     # http://localhost:3000
+pnpm build
+```
 
 Routing: `diegozuluaga-router` owns the domain and rewrites `/` (and any path not claimed by
-`/ap2`, `/mcpa`, `/trusted-edgeai`) to this project's deployment.
-
-Edit `index.html`, then redeploy (`vercel --prod`, or push if the repo is connected to Vercel).
+`/ap2` or `/mcpa`) to this project. Pushing to `main` deploys via Vercel's GitHub integration.
