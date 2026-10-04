@@ -1,0 +1,10 @@
+{
+  "framework": null,
+  "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/(headshot.jpg|favicon.svg)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
+    }
+  ]
+}
