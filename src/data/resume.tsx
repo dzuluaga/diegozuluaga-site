@@ -8,9 +8,9 @@ export const DATA = {
   location: "San Jose, CA",
   locationLink: "https://www.google.com/maps/place/San+Jose,+CA",
   description:
-    "I build the consent layer for AI agents: verifiable credentials, agentic commerce, and on-device trust.",
+    "Engineering leader building trust into AI agents: digital credentials, agentic commerce, and open-source SDKs on 800M+ devices.",
   summary:
-    "Most “agent that pays” demos skip the hard part: **who authorized it, and can you prove it?** That’s the layer I build. I lead [CredentAgent](https://github.com/openmobilehub/credentagent), an open-source consent layer for AI agents, and agentic commerce on [Multipaz](https://developer.multipaz.org), the OpenWallet Foundation credential library used in Google Wallet. I’m a first-cohort [Agentic AI Foundation Ambassador](https://aaif.io/ambassadors/), and before Futurewei I spent nine years across Apigee and Google helping developers ship on APIs, Assistant, and Android. Outside work I race: ultramarathons, IRONMAN California, and Escape from the Rock.",
+    "I’ve spent 25 years in customer-facing engineering, helping developers ship on new platforms: nine of them across Apigee and Google (APIs, Assistant, Android), and since 2022 at Futurewei, where I head [Open Mobile Hub](https://openmobilehub.org) under the Linux Foundation, whose open-source SDKs reach 800M+ devices, and built a forward-deployed engineering team from zero. Today I work on the part most “agent that pays” demos skip: **who authorized it, and can you prove it?** I lead agentic commerce on [Multipaz](https://developer.multipaz.org), the OpenWallet Foundation credential library used in Google Wallet, and [CredentAgent](https://github.com/openmobilehub/credentagent), an open-source consent layer for AI agents. I’m a first-cohort [Agentic AI Foundation Ambassador](https://aaif.io/ambassadors/). Outside work I race: ultramarathons, IRONMAN California, and Escape from the Rock.",
   avatarUrl: "/headshot.jpg",
   skills: [
     "Agentic commerce",
@@ -151,6 +151,29 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "OMH Maps SDK",
+      href: "https://github.com/openmobilehub/react-native-omh-maps",
+      dates: "2024 – 2025 · Open Mobile Hub (LF)",
+      active: true,
+      description:
+        "One maps API for Android and React Native that runs on Google (GMS) and non-GMS devices alike, with pluggable providers: Google Maps, OpenStreetMap, Mapbox, and Azure Maps. On iOS, Apple Maps and Google Maps.",
+      technologies: ["Android", "React Native", "Kotlin", "TypeScript"],
+      links: [
+        {
+          type: "Android",
+          href: "https://github.com/openmobilehub/android-omh-maps",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "React Native",
+          href: "https://github.com/openmobilehub/react-native-omh-maps",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/projects/omh-maps.png",
+      video: "",
+    },
+    {
       title: "CredentAgent",
       href: "https://github.com/openmobilehub/credentagent",
       dates: "2026 · Lead · Open Mobile Hub (LF)",
@@ -207,6 +230,52 @@ export const DATA = {
         },
       ],
       image: "/projects/mcp-server.jpg",
+      video: "",
+    },
+    {
+      title: "OMH Auth SDK",
+      href: "https://github.com/openmobilehub/react-native-omh-auth",
+      dates: "2024 · Open Mobile Hub (LF)",
+      active: true,
+      description:
+        "One sign-in API for Android and React Native across GMS and non-GMS devices: Google, Facebook, Microsoft, and Dropbox, with instant sign-in through the native apps and Custom Tabs on Android.",
+      technologies: ["Android", "React Native", "OAuth", "Kotlin", "TypeScript"],
+      links: [
+        {
+          type: "Android",
+          href: "https://github.com/openmobilehub/android-omh-auth",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "React Native",
+          href: "https://github.com/openmobilehub/react-native-omh-auth",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/projects/omh-auth.png",
+      video: "",
+    },
+    {
+      title: "OMH Storage SDK",
+      href: "https://github.com/openmobilehub/react-native-omh-storage",
+      dates: "2024 – 2025 · Open Mobile Hub (LF)",
+      active: true,
+      description:
+        "One cloud-storage API for Android and React Native over the providers’ official SDKs: Google Drive (GMS and non-GMS), OneDrive, and Dropbox, with the same code on every device.",
+      technologies: ["Android", "React Native", "Google Drive", "OneDrive", "Dropbox"],
+      links: [
+        {
+          type: "Android",
+          href: "https://github.com/openmobilehub/android-omh-storage",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "React Native",
+          href: "https://github.com/openmobilehub/react-native-omh-storage",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/projects/omh-storage.png",
       video: "",
     },
     {
@@ -271,75 +340,6 @@ export const DATA = {
         },
       ],
       image: "/projects/x402-android.png",
-      video: "",
-    },
-    {
-      title: "OMH Maps SDK",
-      href: "https://github.com/openmobilehub/react-native-omh-maps",
-      dates: "2024 – 2025 · Open Mobile Hub (LF)",
-      active: true,
-      description:
-        "One maps API for Android and React Native that runs on Google (GMS) and non-GMS devices alike, with pluggable providers: Google Maps, OpenStreetMap, Mapbox, and Azure Maps. On iOS, Apple Maps and Google Maps.",
-      technologies: ["Android", "React Native", "Kotlin", "TypeScript"],
-      links: [
-        {
-          type: "Android",
-          href: "https://github.com/openmobilehub/android-omh-maps",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "React Native",
-          href: "https://github.com/openmobilehub/react-native-omh-maps",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/projects/omh-maps.png",
-      video: "",
-    },
-    {
-      title: "OMH Auth SDK",
-      href: "https://github.com/openmobilehub/react-native-omh-auth",
-      dates: "2024 · Open Mobile Hub (LF)",
-      active: true,
-      description:
-        "One sign-in API for Android and React Native across GMS and non-GMS devices: Google, Facebook, Microsoft, and Dropbox, with instant sign-in through the native apps and Custom Tabs on Android.",
-      technologies: ["Android", "React Native", "OAuth", "Kotlin", "TypeScript"],
-      links: [
-        {
-          type: "Android",
-          href: "https://github.com/openmobilehub/android-omh-auth",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "React Native",
-          href: "https://github.com/openmobilehub/react-native-omh-auth",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/projects/omh-auth.png",
-      video: "",
-    },
-    {
-      title: "OMH Storage SDK",
-      href: "https://github.com/openmobilehub/react-native-omh-storage",
-      dates: "2024 – 2025 · Open Mobile Hub (LF)",
-      active: true,
-      description:
-        "One cloud-storage API for Android and React Native over the providers’ official SDKs: Google Drive (GMS and non-GMS), OneDrive, and Dropbox, with the same code on every device.",
-      technologies: ["Android", "React Native", "Google Drive", "OneDrive", "Dropbox"],
-      links: [
-        {
-          type: "Android",
-          href: "https://github.com/openmobilehub/android-omh-storage",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "React Native",
-          href: "https://github.com/openmobilehub/react-native-omh-storage",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/projects/omh-storage.png",
       video: "",
     },
     {

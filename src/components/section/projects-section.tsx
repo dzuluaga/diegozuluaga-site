@@ -26,8 +26,8 @@ export default function ProjectsSection() {
                     <div className="flex flex-col gap-y-3 items-center justify-center">
                         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">What I’m building</h2>
                         <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">
-                            Credentials an agent can present, mandates it can carry, and
-                            rails it can settle on. Open source, mostly under the Linux
+                            Open-source SDKs that run on 800M+ devices, and the credential
+                            and payment layers AI agents need next. Mostly under the Linux
                             Foundation.
                         </p>
                     </div>
