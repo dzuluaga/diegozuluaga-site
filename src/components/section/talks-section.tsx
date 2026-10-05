@@ -21,7 +21,7 @@ export default function TalksSection() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">On stage</h2>
             <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">
               From Android at Google to agents and verifiable credentials today. In
-              September 2026 I took CredentAgent on tour: Geneva, Shanghai, Shenzhen, and Amsterdam.
+              September 2026 I took CredentAgent on tour: Geneva, Shanghai, and Amsterdam.
             </p>
           </div>
         </div>
