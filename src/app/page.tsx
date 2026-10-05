@@ -155,6 +155,33 @@ export default function Page() {
           <TalksSection />
         </BlurFade>
       </section>
+      <section id="races">
+        <div className="flex min-h-0 flex-col gap-y-4">
+          <BlurFade delay={BLUR_FADE_DELAY * 15}>
+            <h2 className="text-xl font-bold">Races</h2>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Long courses teach the same thing standards work does: pace yourself and keep showing up.
+            </p>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 15.5}>
+            <ul className="flex flex-wrap gap-2">
+              {DATA.races.map((race) => (
+                <li key={race.href}>
+                  <a
+                    href={race.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl border px-3 py-1.5 text-sm hover:bg-muted transition-colors"
+                  >
+                    {race.title}
+                    {race.year && <span className="text-xs text-muted-foreground">{race.year}</span>}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </BlurFade>
+        </div>
+      </section>
       <section id="contact">
         <BlurFade delay={BLUR_FADE_DELAY * 16}>
           <ContactSection />

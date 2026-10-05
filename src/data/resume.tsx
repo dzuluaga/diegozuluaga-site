@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "I build the consent layer for AI agents: verifiable credentials, agentic commerce, and on-device trust.",
   summary:
-    "Most “agent that pays” demos skip the hard part: **who authorized it, and can you prove it?** That’s the layer I build. I lead [CredentAgent](https://github.com/openmobilehub/credentagent), an open-source consent layer for AI agents, and agentic commerce on [Multipaz](https://developer.multipaz.org), the OpenWallet Foundation credential library used in Google Wallet. I’m a first-cohort [Agentic AI Foundation Ambassador](https://aaif.io/ambassadors/), and before Futurewei I spent nine years across Apigee and Google helping developers ship on APIs, Assistant, and Android. Outside work: ultramarathons, an Ironman, and the Alcatraz swim.",
+    "Most “agent that pays” demos skip the hard part: **who authorized it, and can you prove it?** That’s the layer I build. I lead [CredentAgent](https://github.com/openmobilehub/credentagent), an open-source consent layer for AI agents, and agentic commerce on [Multipaz](https://developer.multipaz.org), the OpenWallet Foundation credential library used in Google Wallet. I’m a first-cohort [Agentic AI Foundation Ambassador](https://aaif.io/ambassadors/), and before Futurewei I spent nine years across Apigee and Google helping developers ship on APIs, Assistant, and Android. Outside work I race: ultramarathons, IRONMAN California, and Escape from the Rock.",
   avatarUrl: "/headshot.jpg",
   skills: [
     "Agentic commerce",
@@ -40,6 +40,12 @@ export const DATA = {
         name: "GitHub",
         url: "https://github.com/dzuluaga",
         icon: Icons.github,
+        navbar: true,
+      },
+      X: {
+        name: "X",
+        url: "https://x.com/dzuluaga",
+        icon: Icons.x,
         navbar: true,
       },
       Email: {
@@ -408,13 +414,19 @@ export const DATA = {
       ],
     },
     {
-      title: "Main-stage session on open wallets and Open Mobile Hub",
+      title: "Digital identity with Multipaz and Open Mobile Hub",
       dates: "July 2025",
       location: "Global Digital Collaboration (GDC25) · Geneva",
       description:
-        "With David Zeuthen (Multipaz, Google), representing Open Mobile Hub at the first Global Digital Collaboration conference.",
+        "Main-stage joint talk with David Zeuthen (Multipaz, Google): one open credential stack across wallets, apps, and devices.",
       image: "/logos/globaldigitalcollaboration.org.png",
-      links: [],
+      links: [
+        {
+          title: "Watch",
+          icon: <Icons.youtube className="h-4 w-4" />,
+          href: "https://youtu.be/FhXOSuaIiew",
+        },
+      ],
     },
     {
       title: "Linux Foundation summits",
@@ -423,6 +435,21 @@ export const DATA = {
       description: "Open Mobile Hub and open-source SDKs for 800M+ devices.",
       image: "/logos/linuxfoundation.org.png",
       links: [],
+    },
+    {
+      title: "Fixing Challenges With Mobile App Development Across Platforms",
+      dates: "July 2024",
+      location: "Linux Foundation webinar",
+      description:
+        "How Open Mobile Hub gives Android and React Native apps one API for maps, sign-in, and storage on GMS and non-GMS devices.",
+      image: "/logos/linuxfoundation.org.png",
+      links: [
+        {
+          title: "Watch",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://www.linuxfoundation.org/webinars/fixing-challenges-with-mobile-app-development-across-platforms",
+        },
+      ],
     },
     {
       title: "From Fragmentation to Unity: The Role of OMH in Mobile Development",
@@ -458,6 +485,12 @@ export const DATA = {
   writing: [
     {
       kind: "Paper",
+      title: "Cross-Platform Digital Payment Credential & Agentic AI Commerce Ecosystem",
+      detail: "White paper · Google Docs",
+      href: "https://docs.google.com/document/d/1S0ec6Jof3X4vY_-RHBiqdyjKPQyJW5GqoU8eCNrD4QU/edit",
+    },
+    {
+      kind: "Paper",
       title: "Secure Wearable Apps for Remote Healthcare Through Modern Cryptography",
       detail: "arXiv:2410.07629 · 2024 · with Andric Li, Grace Luo, Christopher Tao",
       href: "https://arxiv.org/abs/2410.07629",
@@ -481,10 +514,93 @@ export const DATA = {
       href: "https://www.callstack.com/blog/introduction-to-the-react-native-omh-maps-library",
     },
     {
+      kind: "Blog",
+      title: "Prepare your app to support predictive back gestures",
+      detail: "Android Developers Blog · July 2022 · with Jason Tang and Michael Mauzy",
+      href: "https://android-developers.googleblog.com/2022/07/prepare-your-app-to-support-predictive-back-gestures.html",
+    },
+    {
       kind: "Codelab",
       title: "Update your app to support future predictive back gesture",
       detail: "Google Codelabs · Android",
       href: "https://codelabs.developers.google.com/handling-gesture-back-navigation",
+    },
+    {
+      kind: "Docs",
+      title: "Add support for the predictive back gesture",
+      detail: "Android Developers guide",
+      href: "https://developer.android.com/guide/navigation/custom-back/predictive-back-gesture",
+    },
+    {
+      kind: "Docs",
+      title: "Support modern emoji",
+      detail: "Android Developers guide",
+      href: "https://developer.android.com/guide/topics/ui/look-and-feel/emoji2",
+    },
+    {
+      kind: "Docs",
+      title: "Google Assistant for Android: App Actions",
+      detail: "Google Developers documentation",
+      href: "https://developers.google.com/assistant/app/overview",
+    },
+  ],
+  earlierCode: [
+    {
+      title: "Google Assistant App Actions sample (Kotlin)",
+      href: "https://github.com/actions-on-google/appactions-common-biis-kotlin",
+    },
+    {
+      title: "Snowman: Interactive Canvas sample (Dialogflow, Node.js)",
+      href: "https://github.com/actions-on-google/dialogflow-snowman-nodejs",
+    },
+    {
+      title: "Predictive back navigation codelab sample",
+      href: "https://github.com/googlecodelabs/handling-back-navigation",
+    },
+    {
+      title: "Apigee deploy Grunt.js plugin",
+      href: "https://github.com/apigeecs/apigee-deploy-grunt-plugin",
+    },
+    {
+      title: "Datamodel to OpenAPI",
+      href: "https://github.com/dzuluaga/datamodel-to-oas",
+    },
+  ],
+  races: [
+    {
+      title: "IRONMAN 70.3 Santa Cruz",
+      year: "2024",
+      href: "https://feathersprod.blob.core.windows.net/api-public/074fcbfb-35b1-418f-b1bf-4c27957223bb.pdf",
+    },
+    {
+      title: "IRONMAN California",
+      year: "2023",
+      href: "https://feathersprod.blob.core.windows.net/api-public/7669B464-0ADC-4AA0-A446-F5B654D90D3C.pdf",
+    },
+    {
+      title: "IRONMAN 70.3 Santa Cruz",
+      year: "2023",
+      href: "https://feathersprod.blob.core.windows.net/api-public/9EBC1440-C0D1-45FB-9BE5-EBD3EECB4BE8.pdf",
+    },
+    {
+      title: "Escape from the Rock XL Duathlon",
+      year: "2022",
+      href: "https://raceroster.com/events/2022/49870/2022-alcatraz-xl-escape-from-the-rock",
+    },
+    {
+      title: "Redtail Ridge 50K, Lake Chabot",
+      year: "",
+      href: "https://runsignup.com/Race/Results/143410/IndividualResult/zNFf?resultSetId=437494#U84507078",
+    },
+    {
+      title: "Broken Arrow Ultramarathon 46K",
+      year: "",
+      href: "https://www.athlinks.com/event/171438/results/Event/1053701/Course/2374411/Bib/2730",
+    },
+    {
+      title: "San Diego Marathon",
+      year: "",
+      href: "https://feathersprod.blob.core.windows.net/api-public/5f822051-bb2d-4805-9fe1-9694eee6361c.pdf",
     },
   ],
   demos: [

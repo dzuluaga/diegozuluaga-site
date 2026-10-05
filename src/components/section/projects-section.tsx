@@ -1,6 +1,7 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
 import { DATA } from "@/data/resume";
+import { Icons } from "@/components/icons";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -51,6 +52,24 @@ export default function ProjectsSection() {
                             />
                         </BlurFade>
                     ))}
+                </div>
+                <div className="flex flex-col gap-y-3 max-w-[800px] w-full mx-auto">
+                    <h3 className="text-lg font-semibold">Earlier open source</h3>
+                    <ul className="flex flex-wrap gap-2">
+                        {DATA.earlierCode.map((repo) => (
+                            <li key={repo.href}>
+                                <a
+                                    href={repo.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 rounded-xl border px-3 py-1.5 text-sm hover:bg-muted transition-colors"
+                                >
+                                    <Icons.github className="size-3.5" />
+                                    {repo.title}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </section>

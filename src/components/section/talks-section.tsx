@@ -79,7 +79,7 @@ export default function TalksSection() {
           </ul>
         </div>
         <div className="flex flex-col gap-y-3">
-          <h3 className="text-lg font-semibold">Writing, papers &amp; podcasts</h3>
+          <h3 className="text-lg font-semibold">Writing, papers, docs &amp; podcasts</h3>
           <ul className="flex flex-col gap-2">
             {DATA.writing.map((item) => (
               <li key={item.href}>
