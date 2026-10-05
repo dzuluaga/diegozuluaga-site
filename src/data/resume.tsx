@@ -382,34 +382,51 @@ export const DATA = {
   talks: [
     {
       title: "Agents Can Pay. Can They Prove It?",
-      dates: "September 2026",
+      dates: "September 18, 2026",
       location: "AGNTCon + MCPCon Europe · Amsterdam",
       description:
         "How an agent proves who authorized a payment: verifiable credentials from the user’s wallet, bound to AP2 mandates, with the real-vs-mocked parts stated on stage.",
       image: "/logos/aaif.io.png",
-      links: [],
+      links: [
+        {
+          title: "Session",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://agntconmcpconeu26.sched.com/event/2RBAL",
+        },
+      ],
     },
     {
       title: "Agents Can Pay. Can They Prove It?",
-      dates: "September 2026",
+      dates: "September 6–7, 2026",
       location: "AGNTCon + MCPCon China · Shanghai",
       description:
-        "The identity-first edition of the talk: open credential standards as the lane alongside national digital ID.",
+        "With Saurabh Goyal. The identity-first edition of the talk: open credential standards as the lane alongside national digital ID.",
       image: "/logos/aaif.io.png",
-      links: [],
+      links: [
+        {
+          title: "Session",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://www.lfopensource.cn/mcp-dev-summit-shanghai/program/schedule/?id=1256396",
+        },
+      ],
     },
     {
       title: "Your Identity Wallet, Now for AI Agents",
-      dates: "September 2026",
+      dates: "September 3, 2026",
       location: "Global Digital Collaboration (GDC26) · Geneva",
       description:
         "With David Zeuthen (Multipaz, Google). Hardware-held credentials an agent can present and pay with, live on Android and iOS, with CredentAgent as the open-source deliverable.",
       image: "/logos/globaldigitalcollaboration.org.png",
       links: [
         {
-          title: "GDC26",
+          title: "Session",
           icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://globaldigitalcollaboration.org/gdc26",
+          href: "https://globaldigitalcollaboration.org/gdc26?day=sept-3",
+        },
+        {
+          title: "GDC26 after-movie",
+          icon: <Icons.youtube className="h-4 w-4" />,
+          href: "https://www.youtube.com/watch?v=WlS2_P65f3E",
         },
       ],
     },
