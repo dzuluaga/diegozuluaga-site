@@ -268,6 +268,75 @@ export const DATA = {
       video: "",
     },
     {
+      title: "OMH Maps SDK",
+      href: "https://github.com/openmobilehub/react-native-omh-maps",
+      dates: "2024 – 2025 · Open Mobile Hub (LF)",
+      active: true,
+      description:
+        "One maps API for Android and React Native that runs on Google (GMS) and non-GMS devices alike, with pluggable providers: Google Maps, OpenStreetMap, Mapbox, and Azure Maps. On iOS, Apple Maps and Google Maps.",
+      technologies: ["Android", "React Native", "Kotlin", "TypeScript"],
+      links: [
+        {
+          type: "Android",
+          href: "https://github.com/openmobilehub/android-omh-maps",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "React Native",
+          href: "https://github.com/openmobilehub/react-native-omh-maps",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/projects/omh-maps.png",
+      video: "",
+    },
+    {
+      title: "OMH Auth SDK",
+      href: "https://github.com/openmobilehub/react-native-omh-auth",
+      dates: "2024 · Open Mobile Hub (LF)",
+      active: true,
+      description:
+        "One sign-in API for Android and React Native across GMS and non-GMS devices: Google, Facebook, Microsoft, and Dropbox, with instant sign-in through the native apps and Custom Tabs on Android.",
+      technologies: ["Android", "React Native", "OAuth", "Kotlin", "TypeScript"],
+      links: [
+        {
+          type: "Android",
+          href: "https://github.com/openmobilehub/android-omh-auth",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "React Native",
+          href: "https://github.com/openmobilehub/react-native-omh-auth",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/projects/omh-auth.png",
+      video: "",
+    },
+    {
+      title: "OMH Storage SDK",
+      href: "https://github.com/openmobilehub/react-native-omh-storage",
+      dates: "2024 – 2025 · Open Mobile Hub (LF)",
+      active: true,
+      description:
+        "One cloud-storage API for Android and React Native over the providers’ official SDKs: Google Drive (GMS and non-GMS), OneDrive, and Dropbox, with the same code on every device.",
+      technologies: ["Android", "React Native", "Google Drive", "OneDrive", "Dropbox"],
+      links: [
+        {
+          type: "Android",
+          href: "https://github.com/openmobilehub/android-omh-storage",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "React Native",
+          href: "https://github.com/openmobilehub/react-native-omh-storage",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/projects/omh-storage.png",
+      video: "",
+    },
+    {
       title: "Stripe × x402 walkthrough",
       href: "https://github.com/dzuluaga/stripe-x402-walkthrough",
       dates: "2026 · Reference",
