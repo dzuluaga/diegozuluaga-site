@@ -32,7 +32,7 @@ export const DATA = {
     social: {
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/diegozuluaga",
+        url: "https://www.linkedin.com/in/diegofzuluaga",
         icon: Icons.linkedin,
         navbar: true,
       },
@@ -408,12 +408,83 @@ export const DATA = {
       ],
     },
     {
+      title: "Main-stage session on open wallets and Open Mobile Hub",
+      dates: "July 2025",
+      location: "Global Digital Collaboration (GDC25) · Geneva",
+      description:
+        "With David Zeuthen (Multipaz, Google), representing Open Mobile Hub at the first Global Digital Collaboration conference.",
+      image: "/logos/globaldigitalcollaboration.org.png",
+      links: [],
+    },
+    {
       title: "Linux Foundation summits",
       dates: "2025",
       location: "Denver · LF Member Summit, Napa",
       description: "Open Mobile Hub and open-source SDKs for 800M+ devices.",
       image: "/logos/linuxfoundation.org.png",
       links: [],
+    },
+    {
+      title: "From Fragmentation to Unity: The Role of OMH in Mobile Development",
+      dates: "September 2024",
+      location: "React Universe Conf · Wrocław",
+      description:
+        "With Preston Lau. Open Mobile Hub as one interface for developers, service providers, and OEMs across GMS and non-GMS devices, and the launch of the OMH Cloud Storage module.",
+      image: "/logos/callstack.com.png",
+      links: [
+        {
+          title: "Watch",
+          icon: <Icons.youtube className="h-4 w-4" />,
+          href: "https://www.youtube.com/watch?v=0eBxvmc54OA",
+        },
+      ],
+    },
+    {
+      title: "Gesture navigation best practices",
+      dates: "2022",
+      location: "droidcon",
+      description:
+        "With Aaron Labiaga, as Android Developer Relations at Google: predictive back, edge-to-edge, gesture conflicts, and immersive modes for Android 13+.",
+      image: "/logos/google.com.png",
+      links: [
+        {
+          title: "Watch",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://www.droidcon.com/2022/08/01/gesture-navigation-best-practices/",
+        },
+      ],
+    },
+  ],
+  writing: [
+    {
+      kind: "Paper",
+      title: "Secure Wearable Apps for Remote Healthcare Through Modern Cryptography",
+      detail: "arXiv:2410.07629 · 2024 · with Andric Li, Grace Luo, Christopher Tao",
+      href: "https://arxiv.org/abs/2410.07629",
+    },
+    {
+      kind: "Podcast",
+      title: "Open Mobile Hub: Non-GMS and Cross-Platform Possibilities",
+      detail: "React Universe On Air (Callstack) · August 2024",
+      href: "https://www.callstack.com/podcasts/open-mobile-hub-opening-non-gms-and-cross-platform-possibilities",
+    },
+    {
+      kind: "Article",
+      title: "Introducing the OMH Cloud Storage Module",
+      detail: "Callstack blog · October 2024",
+      href: "https://www.callstack.com/blog/introducing-the-omh-cloud-storage-module",
+    },
+    {
+      kind: "Article",
+      title: "Introduction to the React Native OMH Maps Library",
+      detail: "Callstack blog · July 2024",
+      href: "https://www.callstack.com/blog/introduction-to-the-react-native-omh-maps-library",
+    },
+    {
+      kind: "Codelab",
+      title: "Update your app to support future predictive back gesture",
+      detail: "Google Codelabs · Android",
+      href: "https://codelabs.developers.google.com/handling-gesture-back-navigation",
     },
   ],
   demos: [

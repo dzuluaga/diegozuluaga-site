@@ -18,10 +18,10 @@ export default function TalksSection() {
             <div className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
           </div>
           <div className="flex flex-col gap-y-3 items-center justify-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Three stages, three weeks</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">On stage</h2>
             <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">
-              In September 2026 I took agents and verifiable credentials on tour: Geneva,
-              Shanghai, and Amsterdam.
+              From Android at Google to agents and verifiable credentials today. In
+              September 2026 I took CredentAgent on tour: Geneva, Shanghai, Shenzhen, and Amsterdam.
             </p>
           </div>
         </div>
@@ -73,6 +73,29 @@ export default function TalksSection() {
                     <PlayIcon className="size-3 fill-current" aria-hidden />
                   </span>
                   {demo.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="flex flex-col gap-y-3">
+          <h3 className="text-lg font-semibold">Writing, papers &amp; podcasts</h3>
+          <ul className="flex flex-col gap-2">
+            {DATA.writing.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 rounded-xl border px-4 py-3 text-sm hover:bg-muted transition-colors"
+                >
+                  <Badge variant="outline" className="mt-0.5 w-16 flex-none justify-center text-[11px]">
+                    {item.kind}
+                  </Badge>
+                  <span className="flex flex-col gap-0.5">
+                    <span className="font-medium text-foreground">{item.title}</span>
+                    <span className="text-xs text-muted-foreground">{item.detail}</span>
+                  </span>
                 </Link>
               </li>
             ))}
