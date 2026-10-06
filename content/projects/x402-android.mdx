@@ -1,0 +1,43 @@
+---
+title: x402-android
+summary: A reference Android wallet that pays for APIs over HTTP 402 with a hardware-protected key, built step by step and honest about where the key is still exposed.
+role: Sole author
+period: May – Jun 2026 · Open Mobile Hub
+---
+
+## The problem
+
+x402 lets an API ask for payment with HTTP status 402 and get paid in USDC within the same request. That works for agents and phones only if the signing key is safe. Most Android crypto wallets protect the seed by encrypting it with a hardware-backed key. I wanted to build that pattern from scratch and measure what it actually protects.
+
+## What I built
+
+Four steps, each runnable on its own:
+
+1. A Node client using the official x402 library.
+2. A Kotlin CLI that builds the EIP-712 signature by hand.
+3. An Android app with a hardcoded key, to get the flow working.
+4. The real thing: a StrongBox (Titan M2) AES-256-GCM key, gated by biometrics and non-extractable, that unwraps the seed only to sign. A later step adds payment history that records the security level used for every signature.
+
+```text
+StrongBox wrap key (biometric)
+   ──unwrap──► seed in app memory
+   ──► EIP-712 TransferWithAuthorization (EIP-3009)
+   ──► X-PAYMENT header
+   ──► USDC settles on Base Sepolia
+```
+
+## The trade-off I documented
+
+StrongBox can't sign with secp256k1, the curve Ethereum uses, so the seed has to pass through app memory to sign. My own analysis found that this exposure is not brief: the crypto library leaves copies of the key on the heap, where a heap dump can recover them. That is the weakness of the pattern most wallets ship. Stating it plainly is more useful than a "keys never leave hardware" claim.
+
+## The fix I'm working toward
+
+- **Sign inside hardware:** a P-256 passkey signs inside StrongBox, and a smart-contract wallet verifies the signature on-chain.
+- **Prove the device:** Android Key Attestation goes in the payment envelope, so a merchant can verify the request came from a real phone.
+- **Tested so far:** on a separate branch, StrongBox rejected Ed25519, while a TEE-backed Ed25519 signer worked end-to-end on a Pixel 10 Pro. That work also surfaced a bug I fixed upstream in Multipaz.
+
+## Evidence
+
+- [Demo video](https://youtube.com/shorts/gpVeYkYqaJE) and a [settled testnet transaction](https://sepolia.basescan.org/tx/0x1e77293d1d7cc5f1ba4d6d0df4496cfb06ffbb5171b718938cca5a710d05bfcd).
+- Testnet only, and labeled as not production-ready in the README.
+- Source: [github.com/openmobilehub/x402-android](https://github.com/openmobilehub/x402-android)

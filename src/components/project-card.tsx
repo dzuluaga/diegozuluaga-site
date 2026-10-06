@@ -39,6 +39,8 @@ interface Props {
     type: string;
     href: string;
   }[];
+  /** slug under /projects; when set, the card opens its case study */
+  caseStudy?: string;
   className?: string;
 }
 
@@ -52,8 +54,12 @@ export function ProjectCard({
   image,
   video,
   links,
+  caseStudy,
   className,
 }: Props) {
+  const target = caseStudy
+    ? { href: `/projects/${caseStudy}` }
+    : { href: href || "#", target: "_blank", rel: "noopener noreferrer" };
   return (
     <div
       className={cn(
@@ -62,12 +68,7 @@ export function ProjectCard({
       )}
     >
       <div className="relative shrink-0">
-        <Link
-          href={href || "#"}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block"
-        >
+        <Link {...target} className="block">
           {video ? (
             <video
               src={video}
@@ -83,9 +84,19 @@ export function ProjectCard({
             <div className="w-full aspect-[2/1] bg-muted" />
           )}
         </Link>
-        {links && links.length > 0 && (
+        {((links && links.length > 0) || caseStudy) && (
           <div className="absolute top-2 right-2 flex flex-wrap gap-2">
-            {links.map((link, idx) => (
+            {caseStudy && (
+              <Link href={`/projects/${caseStudy}`} onClick={(e) => e.stopPropagation()}>
+                <Badge
+                  className="flex items-center gap-1.5 text-xs bg-white text-black hover:bg-white/90 border border-black/10"
+                  variant="default"
+                >
+                  Case study
+                </Badge>
+              </Link>
+            )}
+            {links?.map((link, idx) => (
               <Link
                 href={link.href}
                 key={idx}
@@ -112,11 +123,9 @@ export function ProjectCard({
             <time className="text-xs text-muted-foreground">{dates}</time>
           </div>
           <Link
-            href={href || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
+            {...target}
             className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-            aria-label={`Open ${title}`}
+            aria-label={caseStudy ? `Read the ${title} case study` : `Open ${title}`}
           >
             <ArrowUpRight className="h-4 w-4" aria-hidden />
           </Link>

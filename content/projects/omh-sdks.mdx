@@ -1,0 +1,36 @@
+---
+title: Open Mobile Hub SDKs (Maps, Auth, Storage)
+summary: One API per capability for Android and React Native apps that must run on both Google and non-Google Android devices, with providers chosen at runtime.
+role: Head of Open Mobile Hub; top committer on Android Maps and OMH Core
+period: 2024 – 2025 · Open Mobile Hub (Linux Foundation)
+---
+
+## The problem
+
+Many Android devices ship without Google Mobile Services (GMS). An app built on Google Maps or Google Sign-In breaks there, so teams end up maintaining two builds. The Open Mobile Hub SDKs give developers one API and pick the right provider for the device.
+
+## How it works
+
+Each SDK is a small core plus provider plugins.
+
+- **Maps:** Google Maps, OpenStreetMap, Mapbox and Azure Maps. On iOS, the React Native version uses Apple Maps or Google Maps.
+- **Auth:** Google, Facebook, Microsoft and Dropbox sign-in.
+- **Storage:** Google Drive (GMS and non-GMS), OneDrive and Dropbox.
+
+The provider is chosen at runtime. The app declares a GMS and a non-GMS implementation; at startup the core asks Google Play services whether it's available and loads the matching plugin by reflection. A companion Gradle plugin can also generate separate GMS and non-GMS build variants for teams that want two artifacts.
+
+```text
+App code ──► OMH core API ──► device has GMS?
+                  ├─ yes ─► Google plugin
+                  └─ no  ─► OpenStreetMap, Azure, Mapbox…
+```
+
+## My role
+
+I head Open Mobile Hub at the Linux Foundation and led these SDKs: roadmap, API design reviews and docs, with the engineering team that wrote most of the code. I'm the top committer on the Android Maps SDK (tied) and on OMH Core, and a regular contributor to the Auth and Storage SDKs.
+
+## Evidence
+
+- Published to Maven Central (Android) and npm (React Native). React Native releases include Maps v1.0.3 and Auth v1.0.6, both from 2024.
+- Talks: a Linux Foundation webinar on cross-platform mobile challenges (July 2024), and [From Fragmentation to Unity](https://www.youtube.com/watch?v=0eBxvmc54OA) at React Universe Conf in Wrocław (September 2024).
+- Source: [Maps](https://github.com/openmobilehub/android-omh-maps), [Auth](https://github.com/openmobilehub/android-omh-auth), [Storage](https://github.com/openmobilehub/android-omh-storage), and their React Native counterparts.

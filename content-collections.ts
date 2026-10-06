@@ -7,7 +7,7 @@ import { remarkCodeMeta } from "./src/lib/remark-code-meta";
 const posts = defineCollection({
     name: "posts",
     directory: "content",
-    include: "**/*.mdx",
+    include: "posts/**/*.mdx",
     schema: z.object({
         title: z.string(),
         publishedAt: z.string(),
@@ -28,7 +28,30 @@ const posts = defineCollection({
     },
 });
 
-export default defineConfig({
-    collections: [posts],
+// Case studies linked from the project cards: content/projects/<slug>.mdx → /projects/<slug>
+const projects = defineCollection({
+    name: "projects",
+    directory: "content/projects",
+    include: "*.mdx",
+    schema: z.object({
+        title: z.string(),
+        summary: z.string(),
+        role: z.string(),
+        period: z.string(),
+        content: z.string(),
+    }),
+    transform: async (document, context) => {
+        const mdx = await compileMDX(context, document, {
+            remarkPlugins: [remarkGfm, remarkCodeMeta],
+        });
+        return {
+            ...document,
+            slug: document._meta.path,
+            mdx,
+        };
+    },
 });
 
+export default defineConfig({
+    collections: [posts, projects],
+});
