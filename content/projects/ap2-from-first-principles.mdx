@@ -1,0 +1,35 @@
+---
+title: AP2 from First Principles
+summary: A public course that teaches Google's Agent Payments Protocol by building each piece by hand, then mapping it to the official SDK.
+role: Sole author (54 of 54 commits)
+period: May 2026 · Course at diegozuluaga.dev/ap2
+---
+
+## The problem
+
+AP2, Google's Agent Payments Protocol, is how an agent carries proof of what a user approved: which cart, which payment, under which limits. The official SDK works, but it hides the cryptography. Developers who already know A2A, UCP or verifiable credentials couldn't see what a mandate actually is on the wire.
+
+## What I built
+
+A course where every lesson follows the same five beats: **Frame, Build, Map, Inspect, Check**.
+
+- **Lesson 0:** why agent payments need their own protocol.
+- **Lesson 1:** the six roles and the user journeys.
+- **Lesson 2:** checkout and payment mandates. Build them, verify them, detect tampering, then map them to the SDK.
+- **Lesson 3:** selective disclosure with SD-JWT and key-binding JWTs, and the open payment mandate.
+
+The cryptography is written from scratch: ES256 JWTs on top of the `cryptography` package, including the DER-to-raw signature conversion that libraries usually hide.
+
+## Decisions worth talking about
+
+- **Build first, then map to the SDK**, so learners understand what the SDK is doing for them.
+- **The code is the source of truth.** Snippets on the site are imported from the tested lesson code, so the docs can't drift from what runs.
+- **Pinned upstream.** The official SDK isn't on PyPI, so it is pinned to a specific git revision for reproducible builds.
+- **Tracking the spec.** The course teaches AP2's move from Intent/Cart/Payment mandates to Checkout/Payment mandates with open and closed states.
+
+## Evidence
+
+- Live at [diegozuluaga.dev/ap2](/ap2/), built with Docusaurus and deployed on Vercel.
+- Tested with pytest; a scaffolder generates new lessons.
+- Roadmap: lessons 4 to 9 cover mandate chains and receipts, human-present and human-not-present flows, A2A, MCP/UCP/x402, and disputes.
+- Source: [github.com/dzuluaga/ap2-getting-started](https://github.com/dzuluaga/ap2-getting-started)

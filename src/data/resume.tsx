@@ -152,6 +152,7 @@ export const DATA = {
   projects: [
     {
       title: "OMH Maps SDK",
+      caseStudy: "omh-sdks",
       href: "https://github.com/openmobilehub/react-native-omh-maps",
       dates: "2024 – 2025 · Open Mobile Hub (LF)",
       active: true,
@@ -175,6 +176,7 @@ export const DATA = {
     },
     {
       title: "CredentAgent",
+      caseStudy: "credentagent",
       href: "https://github.com/openmobilehub/credentagent",
       dates: "2026 · Lead · Open Mobile Hub (LF)",
       active: true,
@@ -193,6 +195,7 @@ export const DATA = {
     },
     {
       title: "Agentic commerce on Multipaz",
+      caseStudy: "multipaz-agentic-commerce",
       href: "https://developer.multipaz.org",
       dates: "2026 · Lead · OpenWallet Foundation",
       active: true,
@@ -211,6 +214,7 @@ export const DATA = {
     },
     {
       title: "Digital Credential MCP Server",
+      caseStudy: "digital-credential-mcp-server",
       href: "https://github.com/openmobilehub/mcp-apps-shopping-demo",
       dates: "2026 · Open Mobile Hub",
       active: true,
@@ -234,6 +238,7 @@ export const DATA = {
     },
     {
       title: "OMH Auth SDK",
+      caseStudy: "omh-sdks",
       href: "https://github.com/openmobilehub/react-native-omh-auth",
       dates: "2024 · Open Mobile Hub (LF)",
       active: true,
@@ -257,6 +262,7 @@ export const DATA = {
     },
     {
       title: "OMH Storage SDK",
+      caseStudy: "omh-sdks",
       href: "https://github.com/openmobilehub/react-native-omh-storage",
       dates: "2024 – 2025 · Open Mobile Hub (LF)",
       active: true,
@@ -280,6 +286,7 @@ export const DATA = {
     },
     {
       title: "AP2 from First Principles",
+      caseStudy: "ap2-from-first-principles",
       href: "/ap2/",
       dates: "2026 · Course · diegozuluaga.dev/ap2",
       active: true,
@@ -303,6 +310,7 @@ export const DATA = {
     },
     {
       title: "MCP 2026-07-28 Walkthrough",
+      caseStudy: "mcpa-course",
       href: "/mcpa/",
       dates: "2026 · Course · diegozuluaga.dev/mcpa",
       active: true,
@@ -321,6 +329,7 @@ export const DATA = {
     },
     {
       title: "x402-android",
+      caseStudy: "x402-android",
       href: "https://github.com/openmobilehub/x402-android",
       dates: "2026 · Open Mobile Hub",
       active: true,
@@ -344,6 +353,7 @@ export const DATA = {
     },
     {
       title: "Stripe × x402 walkthrough",
+      caseStudy: "stripe-x402",
       href: "https://github.com/dzuluaga/stripe-x402-walkthrough",
       dates: "2026 · Reference",
       active: true,
@@ -362,6 +372,7 @@ export const DATA = {
     },
     {
       title: "Shopify UCP getting started",
+      caseStudy: "",
       href: "https://github.com/dzuluaga/shopify-ucp-getting-started",
       dates: "2026 · Guide",
       active: true,

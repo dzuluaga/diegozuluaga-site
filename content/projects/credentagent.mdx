@@ -1,0 +1,51 @@
+---
+title: CredentAgent
+summary: The consent layer for AI agents. Before an agent pays, checks an age, or grants access, the user proves one fact from the wallet on their phone.
+role: Lead and main author (about 187 of 216 GitHub commits)
+period: Jun 2026 – present · Open Mobile Hub (Linux Foundation)
+---
+
+## The problem
+
+AI agents can now call tools that move money or unlock things. The hard question is not "can the agent do it?" but "who said it could, and can we prove it?" An API key in the agent proves nothing about the person, and a pop-up "Approve?" button proves very little more.
+
+CredentAgent makes the human step verifiable. Before an agent completes something consequential (a payment, an age-gated purchase, an access grant), it asks the user's phone wallet for a credential, and the wallet shares only the one fact that is needed. Identity leads; payments is one application.
+
+## What I built
+
+Two Apache-2.0 npm packages, extracted from my earlier [Digital Credential MCP Server](/projects/digital-credential-mcp-server):
+
+- **Gate** (`@openmobilehub/credentagent-gate`). Call `mount(app)` on any Express host and it adds the ceremony routes. Merchants write a typed policy such as `age.over(21)`, `membership.discount(10)` or `payment.in("usd")`, with `required`/`optional` and `.when()` conditions, and the gate turns it into a serializable manifest the agent can read.
+- **Storefront** (`@openmobilehub/credentagent-storefront`). `createStorefront()` returns a complete MCP shopping server with nine tools and an embedded widget, so a demo merchant is one call.
+
+```text
+Agent (Claude, ChatGPT, goose)
+   │  tool call creates a proof link
+   ▼
+Gate ──► browser page ──► phone wallet
+   ▲                          │  passkey, mdoc or SD-JWT
+   └── poll: proof complete ◄─┘
+       payment settles last (x402, Hedera testnet)
+```
+
+Every rail ends in one shared `completeOrder` path, and enforcement is server-side, so the agent can never skip a check.
+
+## Decisions worth talking about
+
+- **Honesty in the types.** The current trust level is `presence-only-demo`: there is no issuer trust anchor yet, so a self-crafted mdoc would pass. Rather than hide that, the status is encoded in the API and written down in the README and roadmap.
+- **Six written security invariants** guard the flows, and work is spec-driven (specs 001 to 007).
+- **Signed cart mandate, stateless orders.** The cart travels signed, so serverless instances don't need shared session state ("stateless cart transport, not a stateless server").
+- **Who holds spending authority.** An open design memo argues the wallet, not the merchant server, should hold it for human-not-present flows.
+
+## Evidence
+
+- Releases v0.1.0 (Jun 29) to v0.5.0 (Sep 27, 2026). v0.5.0 moved to the MCP SDK v2 and MCP spec 2026-07-28.
+- Test suite of 249 passing tests (July 2026 status report).
+- Hosted demo at [credentagent-demo.vercel.app/mcp](https://credentagent-demo.vercel.app/mcp).
+- Feedback from the Google AP2 team turned into tracked issues (#39, #40).
+- Taught as a 75-minute hands-on workshop at AGNTCon + MCPCon.
+- Source: [github.com/openmobilehub/credentagent](https://github.com/openmobilehub/credentagent)
+
+## What's next
+
+Issuer-verified trust, user-signed mandates (today they are signed with a server HMAC), and gating actions that have no checkout page.
