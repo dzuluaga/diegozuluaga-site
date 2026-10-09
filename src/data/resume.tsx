@@ -248,23 +248,43 @@ export const DATA = {
           href: "https://github.com/aaif-goose/goose/issues/12703",
           icon: <Icons.github className="size-3" />,
         },
+        {
+          type: "goose",
+          href: "https://github.com/aaif-goose/goose",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "A2UI",
+          href: "https://a2ui.org",
+          icon: <Icons.globe className="size-3" />,
+        },
       ],
       image: "/projects/goose-a2ui.png",
       video: "",
     },
     {
-      title: "MCP Apps host support",
+      title: "MCP Apps host support in JiuwenSwarm",
       href: "https://github.com/openJiuwen-ai/jiuwenswarm/pull/7347",
-      dates: "2026 · Contributor · PR in review",
+      dates: "2026 · Contributor · openJiuwen · PR in review",
       active: true,
       description:
-        "The host side of MCP Apps for a 6K-star open-source multi-agent platform: extension negotiation, a double-iframe sandbox with per-app CSP, and user approval on every app-initiated tool call. CredentAgent is the app side, so this covers both ends.",
+        "The host side of MCP Apps for JiuwenSwarm, openJiuwen’s 6K-star open-source multi-agent platform: extension negotiation, a double-iframe sandbox with per-app CSP, and user approval on every app-initiated tool call. CredentAgent is the app side, so this covers both ends.",
       technologies: ["MCP Apps", "TypeScript", "Sandboxing"],
       links: [
         {
           type: "Pull request",
           href: "https://github.com/openJiuwen-ai/jiuwenswarm/pull/7347",
           icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "JiuwenSwarm",
+          href: "https://github.com/openJiuwen-ai/jiuwenswarm",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "openJiuwen",
+          href: "https://openjiuwen.com/en/",
+          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
