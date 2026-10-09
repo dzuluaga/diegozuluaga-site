@@ -8,11 +8,13 @@ export const DATA = {
   location: "San Jose, CA",
   locationLink: "https://www.google.com/maps/place/San+Jose,+CA",
   description:
-    "Engineering leader building trust into AI agents: digital credentials, agentic commerce, and open-source SDKs on 800M+ devices.",
+    "Solutions architecture leader who gets partners to production with AI agents, with a focus on agentic commerce, digital credentials and Android.",
   summary:
-    "I’ve spent 25 years in customer-facing engineering, helping developers ship on new platforms: nine of them across Apigee and Google (APIs, Assistant, Android), and since 2022 at Futurewei, where I head [Open Mobile Hub](https://openmobilehub.org) under the Linux Foundation, whose open-source SDKs reach 800M+ devices, and built a forward-deployed engineering team from zero. Today I work on the part most “agent that pays” demos skip: **who authorized it, and can you prove it?** I lead agentic commerce on [Multipaz](https://developer.multipaz.org), the OpenWallet Foundation credential library used in Google Wallet, and [CredentAgent](https://github.com/openmobilehub/credentagent), an open-source consent layer for AI agents. I’m a first-cohort [Agentic AI Foundation Ambassador](https://aaif.io/ambassadors/). Outside work I race: ultramarathons, IRONMAN California, and Escape from the Rock.",
+    "I’ve spent 25 years in customer- and partner-facing engineering: three at Apigee, six at Google (APIs, Assistant, Android), and since 2022 at Futurewei, where I run partner solutions architecture. I built that team from zero, and we take partners from prototype to production, lately with AI agents. I also head [Open Mobile Hub](https://openmobilehub.org) under the Linux Foundation. I’d rather show a prototype than a slide, so I keep building. Today I work on the part most “agent that pays” demos skip: **who authorized it, and can you prove it?** I lead agentic commerce on [Multipaz](https://developer.multipaz.org), the OpenWallet Foundation credential library used in Google Wallet, and [CredentAgent](https://github.com/openmobilehub/credentagent), an open-source consent layer for AI agents. I’m a first-cohort [Agentic AI Foundation Ambassador](https://aaif.io/ambassadors/). Outside work I race: ultramarathons, IRONMAN California, and Escape from the Rock.",
   avatarUrl: "/headshot.jpg",
   skills: [
+    "Solutions architecture leadership",
+    "Partner & presales engineering",
     "Agentic commerce",
     "AP2 · ACP · UCP · x402",
     "Model Context Protocol",
@@ -68,7 +70,7 @@ export const DATA = {
       start: "Oct 2022",
       end: "Present",
       description:
-        "At Huawei’s US R&D lab: head Open Mobile Hub under the Linux Foundation (open-source SDKs reaching 800M+ devices), lead our digital-credential and agentic-commerce work, and built an 8-person forward-deployed engineering team from zero. Mentored three engineers from mid to senior and 5×’d delivery velocity with AI dev tooling.",
+        "At Huawei’s US R&D lab: run partner solutions architecture with a team of 8 I built from zero, taking partners from prototype to production. We’re also the think tank for our product engineering teams on production-grade agents; one of those agents, Celia, went from 40% to 90% accuracy on complex conversations, proven in an A/B test with 10M users. I head Open Mobile Hub under the Linux Foundation and lead our digital-credential and agentic-commerce work. Mentored three engineers from mid to senior and 5×’d delivery velocity with AI dev tooling.",
     },
     {
       company: "Google",
@@ -89,7 +91,7 @@ export const DATA = {
       location: "San Jose, CA",
       title: "Senior Solution Architect / Partner Engineer",
       logoUrl: "/logos/cloud.google.com.png",
-      start: "Jul 2017",
+      start: "Nov 2016",
       end: "May 2018",
       description:
         "After Google acquired Apigee: led Apigee API Management partner enablement, training 200+ partner solution engineers, and was an escalation point for strategic customers through the transition.",
@@ -102,7 +104,7 @@ export const DATA = {
       title: "Principal Solution Architect",
       logoUrl: "/logos/apigee.jpg",
       start: "Aug 2013",
-      end: "Jul 2017",
+      end: "Nov 2016",
       description:
         "Created the API Delivery Methodology, a deployment playbook covering intake, scoping, rollout gates, and post-launch validation, adopted across a 40-person organization.",
     },
@@ -230,6 +232,42 @@ export const DATA = {
         },
       ],
       image: "/projects/mcp-server.jpg",
+      video: "",
+    },
+    {
+      title: "A2UI in goose desktop",
+      href: "https://github.com/aaif-goose/goose/issues/12703",
+      dates: "2026 · Proposal & prototype · AAIF goose",
+      active: true,
+      description:
+        "Proposed rendering A2UI from MCP tool results natively in goose desktop, so an agent can hand you a real form or card instead of a wall of text. Off by default, reusing the MCP Apps tool-call policy. Working Phase 1 prototype, in design review with the maintainers.",
+      technologies: ["A2UI", "MCP", "React", "goose"],
+      links: [
+        {
+          type: "Proposal",
+          href: "https://github.com/aaif-goose/goose/issues/12703",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/projects/goose-a2ui.png",
+      video: "",
+    },
+    {
+      title: "MCP Apps host support",
+      href: "https://github.com/openJiuwen-ai/jiuwenswarm/pull/7347",
+      dates: "2026 · Contributor · PR in review",
+      active: true,
+      description:
+        "The host side of MCP Apps for a 6K-star open-source multi-agent platform: extension negotiation, a double-iframe sandbox with per-app CSP, and user approval on every app-initiated tool call. CredentAgent is the app side, so this covers both ends.",
+      technologies: ["MCP Apps", "TypeScript", "Sandboxing"],
+      links: [
+        {
+          type: "Pull request",
+          href: "https://github.com/openJiuwen-ai/jiuwenswarm/pull/7347",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
       video: "",
     },
     {
