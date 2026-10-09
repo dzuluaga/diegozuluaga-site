@@ -79,10 +79,10 @@ export const DATA = {
       location: "Mountain View, CA",
       title: "Senior Developer Relations Engineer, Android & Assistant",
       logoUrl: "/logos/google.com.png",
-      start: "May 2018",
+      start: "Jan 2019",
       end: "Oct 2022",
       description:
-        "Android (2021–22): led global developer relations for gesture navigation and messaging, influencing adoption across 100+ top apps. Google Assistant (2018–21): helped developers build for a platform on over a billion devices.",
+        "Android (2021–22): led global developer relations for gesture navigation and messaging, influencing adoption across 100+ top apps. Google Assistant (2019–21): helped developers build for a platform on over a billion devices.",
     },
     {
       company: "Google Cloud",
@@ -92,7 +92,7 @@ export const DATA = {
       title: "Senior Solution Architect / Partner Engineer",
       logoUrl: "/logos/cloud.google.com.png",
       start: "Nov 2016",
-      end: "May 2018",
+      end: "Dec 2018",
       description:
         "After Google acquired Apigee: led Apigee API Management partner enablement, training 200+ partner solution engineers, and was an escalation point for strategic customers through the transition.",
     },
