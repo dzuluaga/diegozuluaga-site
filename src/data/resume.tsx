@@ -446,9 +446,24 @@ export const DATA = {
       ],
     },
     {
-      title: "Linux Foundation summits",
+      title: "Open Mobile Hub spotlight: write once for every mobile platform",
+      dates: "June 2025",
+      location: "Open Source Summit North America · Denver",
+      description:
+        "A 10-minute spotlight after the Linux Foundation panel on disrupting mobile app development: one layer of common interfaces over vendor SDKs, for Kotlin Multiplatform, React Native and Flutter.",
+      image: "/logos/linuxfoundation.org.png",
+      links: [
+        {
+          title: "Watch",
+          icon: <Icons.youtube className="h-4 w-4" />,
+          href: "https://youtu.be/Dv7UDQJOLBk?t=2459",
+        },
+      ],
+    },
+    {
+      title: "Linux Foundation Member Summit",
       dates: "2025",
-      location: "Denver · LF Member Summit, Napa",
+      location: "Napa",
       description: "Open Mobile Hub and open-source SDKs for 800M+ devices.",
       image: "/logos/linuxfoundation.org.png",
       links: [],
