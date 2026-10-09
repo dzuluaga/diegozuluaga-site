@@ -435,13 +435,13 @@ export const DATA = {
       dates: "July 2025",
       location: "Global Digital Collaboration (GDC25) · Geneva",
       description:
-        "Main-stage joint talk with David Zeuthen (Multipaz, Google): one open credential stack across wallets, apps, and devices.",
+        "Main-stage joint talk with David Zeuthen (Multipaz, Google): one open credential stack across wallets, apps, and devices. My part starts at 28:28.",
       image: "/logos/globaldigitalcollaboration.org.png",
       links: [
         {
           title: "Watch",
           icon: <Icons.youtube className="h-4 w-4" />,
-          href: "https://youtu.be/FhXOSuaIiew",
+          href: "https://youtu.be/FhXOSuaIiew?t=1708",
         },
       ],
     },
@@ -493,6 +493,11 @@ export const DATA = {
       links: [
         {
           title: "Watch",
+          icon: <Icons.youtube className="h-4 w-4" />,
+          href: "https://www.youtube.com/watch?v=1bFwIKYYMG4",
+        },
+        {
+          title: "Session",
           icon: <Icons.globe className="h-4 w-4" />,
           href: "https://www.droidcon.com/2022/08/01/gesture-navigation-best-practices/",
         },
