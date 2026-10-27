@@ -579,6 +579,12 @@ export const DATA = {
   ],
   writing: [
     {
+      kind: "Deck",
+      title: "AAIF in San Jose: four new projects, and the agent stack around them",
+      detail: "20-slide deep dive from AGNTCon + MCPCon North America · October 2026 · web + PDF",
+      href: "https://diegozuluaga.dev/aaif26/",
+    },
+    {
       kind: "Paper",
       title: "Cross-Platform Digital Payment Credential & Agentic AI Commerce Ecosystem",
       detail: "White paper · Google Docs",
