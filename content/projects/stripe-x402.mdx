@@ -1,0 +1,42 @@
+---
+title: Stripe × x402 walkthrough
+summary: Charge $0.01 in USDC per API call over HTTP 402, with Stripe as the merchant of record, in seven small steps ending in a real mainnet payment.
+role: Sole author
+period: May 2026 · Reference
+---
+
+## The problem
+
+Developers hear "agents will pay per API call" but rarely see the money land in a real account. Stripe can accept stablecoin payments and x402 handles the request side, but how the two fit together was undocumented.
+
+## The design
+
+Four actors, each with one job:
+
+- **The API** (Node and Hono) holds no keys.
+- **Stripe** creates a deposit address for each PaymentIntent, watches the chain, and credits the merchant.
+- **A facilitator** (x402.org on testnet, Coinbase CDP on mainnet) verifies the payment, settles it, and pays gas.
+- **The buyer's wallet** signs an EIP-3009 authorization off-chain.
+
+```text
+GET /paid ──► app creates a Stripe PaymentIntent
+          ◄── 402 { payTo: Stripe deposit address }
+wallet signs ──► retry with the payment header
+facilitator ──► settles USDC on Base
+Stripe sees the transfer ──► credits the merchant
+          ◄── 200 + X-PAYMENT-RESPONSE
+```
+
+The seven steps grow one capability at a time: hello world, a static paywall, a payment UI, dynamic Stripe addresses, a programmatic client, receipts, then mainnet.
+
+## Decisions worth talking about
+
+- **Stripe and the facilitator are decoupled.** Either can be swapped with one setting (`payTo` or `FACILITATOR_URL`). The cost: if Stripe goes away, funds sent to its deposit addresses are out of reach. That's written down, not hidden.
+- **Testnet first, then mainnet** through Coinbase CDP (1,000 free transactions a month).
+- **Three library bugs found and worked around**: a missing auth header that caused 401s, an address-case mismatch in the paywall, and a hardcoded RPC that made the UI flicker.
+
+## Evidence
+
+- A real payment on Base mainnet, linked from the README.
+- Known gaps listed in the README: an in-memory address cache, a new PaymentIntent on every request, receipts not stored, Base only.
+- Source: [github.com/dzuluaga/stripe-x402-walkthrough](https://github.com/dzuluaga/stripe-x402-walkthrough)

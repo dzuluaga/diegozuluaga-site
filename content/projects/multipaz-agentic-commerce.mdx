@@ -1,0 +1,39 @@
+---
+title: Agentic commerce on Multipaz
+summary: Adding Digital Payment Credentials to Multipaz, the OpenWallet Foundation wallet SDK, so payment credentials can be issued, held, and verified like identity credentials.
+role: Contributor (merged upstream) and codelab author
+period: 2025 – 2026 · OpenWallet Foundation
+---
+
+## The problem
+
+Multipaz is the OpenWallet Foundation's SDK for holding and presenting digital credentials such as mobile driver's licenses, on Android and other Kotlin Multiplatform targets. Payments were the missing case. If an agent is going to pay on someone's behalf, the wallet needs to hold a payment credential, and a verifier needs to check it with the same rigor as an ID.
+
+## What I contributed
+
+**Merged into Multipaz** (7 commits on main, shipped in releases 0.98 to 0.100):
+
+- A Digital Payment Credential (DPC) document type, plus an OpenID4VCI issuer factory that mints DPCs as mdoc credentials, with a unit test (in 0.98.0, whose release notes call out "preliminary support for Digital Payment Credentials").
+- DPC support in the verifier UI, including handling CBOR-tagged dates (in 0.99.0). [Demo](https://youtube.com/shorts/lW_nzQeqApY).
+- A fix for Ed25519 signing in the Android Keystore secure area, verified on a Pixel 10 Pro (in 0.100.0). I found that bug while building a hardware-backed agent payment account.
+- Earlier documentation, including Digital Credentials API guidance.
+
+**Built and proposed, not yet merged:**
+
+- **DPC precheck.** Endpoints built on the W3C Digital Credentials API, and a policy evaluator that runs five checks: issuer trust, proof, assurance level, wallet binding and expiry. It has 12 unit and 4 integration tests.
+- **Transaction binding.** The payee, amount and currency are hashed into the mdoc device response, so a credential can't be replayed for a different payment. Tested on Android; iOS is pending.
+- **An x402 agentic payment hub** in the test app, with a TEE-resident Ed25519 account, a recovery key, and biometric-gated pay.
+
+**Teaching material:**
+
+- A five-module DPC lifecycle codelab covering issuance, device-key binding, the precheck, and diagrams. It's on a branch, not yet merged.
+- On the developer site, an Ask AI widget backed by Gemini, and a text-to-speech plus feedback pipeline.
+
+## Why it matters
+
+Agent payments need a trust chain the merchant can check offline: who issued the credential, which device holds it, and what exact amount was approved. These pieces put that chain into a production wallet SDK instead of a demo.
+
+## Where to look
+
+- [developer.multipaz.org](https://developer.multipaz.org)
+- [github.com/openwallet-foundation/multipaz](https://github.com/openwallet-foundation/multipaz)

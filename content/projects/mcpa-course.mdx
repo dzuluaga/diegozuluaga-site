@@ -1,0 +1,31 @@
+---
+title: MCPA Exam Prep (MCP 2026-07-28)
+summary: A free course for the Linux Foundation's MCP certification, built around the July 2026 spec revision, with a working reference server, a practice exam, and cross-device sync.
+role: Author
+period: Oct 2026 · Course at diegozuluaga.dev/mcpa
+---
+
+## The problem
+
+The Model Context Protocol Associate (MCPA) exam is pinned to MCP spec revision 2026-07-28. That revision changed a lot: the handshake was removed, every request now carries its own version and capabilities, and the protocol moved toward stateless servers. Existing courses still taught the older protocol, which would teach the wrong habits for the exam.
+
+## What I built
+
+- **23 one-page lessons in two tracks.** Track 1 covers core MCP and security with no legacy content. Track 2 covers each 2026-07-28 change, showing the current behavior first.
+- **Each lesson has the same parts:** a real-world story, sequence diagrams, color-coded request and response payloads, impact on existing servers, how to test it, and a quiz.
+- **A reference server** for MCP 2026-07-28 with no dependencies, over HTTP and stdio. It includes an OAuth-protected endpoint and protected resource metadata, so learners can test the auth flow with `curl`.
+- **A final exam weighted like the real exam domains**, plus a spaced-repetition review deck. The exam saves after every answer and resumes after a refresh.
+- **A progress page with cross-device sync.** You get a short code, no account needed, backed by a serverless function on Upstash Redis. When two devices sync, answers merge without losing anything.
+- **An audio overview for every lesson**, generated with Google's notebook tool, for studying away from a screen.
+
+## Decisions worth talking about
+
+- **Current version first.** Showing the old behavior first anchors the wrong mental model, so legacy content is folded away.
+- **Static site, no framework.** A small Node build pre-renders every page; the only server code is the sync function.
+- **Merge, don't overwrite.** Sync keeps a correct answer from either device, every exam attempt, and the stronger review state.
+- **Reviewed by agents playing the learner.** Their feedback drove a second track on security and core concepts.
+
+## Evidence
+
+- Live at [diegozuluaga.dev/mcpa](/mcpa/), free and open source: MIT for the code, CC BY 4.0 for the content.
+- Source: [github.com/dzuluaga/mcp-2026-07-28-walkthrough](https://github.com/dzuluaga/mcp-2026-07-28-walkthrough)

@@ -49,6 +49,7 @@ export default function ProjectsSection() {
                                 image={project.image}
                                 video={project.video}
                                 links={project.links}
+                                caseStudy={project.caseStudy}
                             />
                         </BlurFade>
                     ))}
