@@ -265,10 +265,10 @@ export const DATA = {
     {
       title: "MCP Apps host support in JiuwenSwarm",
       href: "https://github.com/openJiuwen-ai/jiuwenswarm/pull/7347",
-      dates: "2026 · Contributor · openJiuwen · PR in review",
+      dates: "2026 · Contributor · openJiuwen · Merged Oct 2026",
       active: true,
       description:
-        "The host side of MCP Apps for JiuwenSwarm, openJiuwen’s 6K-star open-source multi-agent platform: extension negotiation, a double-iframe sandbox with per-app CSP, and user approval on every app-initiated tool call. CredentAgent is the app side, so this covers both ends.",
+        "The host side of MCP Apps for JiuwenSwarm, openJiuwen’s 8K-star open-source multi-agent platform: extension negotiation, a double-iframe sandbox with per-app CSP, and user approval on every app-initiated tool call. CredentAgent is the app side, so this covers both ends.",
       technologies: ["MCP Apps", "TypeScript", "Sandboxing"],
       links: [
         {
